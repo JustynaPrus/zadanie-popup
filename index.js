@@ -17,9 +17,8 @@ form.addEventListener("submit", (e) => {
   } else if (checkbox.checked == false) {
     alert("Uwaga! Warunki muszą być zaakceptowane!");
   } else if (emailInputValue != "" && nameInputValue != "") {
+    mainSide.classList.toggle("inactive");
+    popup.classList.toggle("inactive");
+    yourName.innerHTML = `${nameInputValue}`;
   }
-
-  mainSide.classList.toggle("inactive");
-  popup.classList.toggle("inactive");
-  yourName.innerHTML = `${nameInputValue}`;
 });
